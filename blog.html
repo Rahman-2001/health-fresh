@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BuildCo Construction</title>
+  <link rel="stylesheet" href="style.css" />          
+   <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+    .category_cards_blk {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 60px 0 30px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.contact_card_block {
+  padding: 50px 10px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, background-color 0.5s ease-out;
+  text-align: center;
+  font-weight: 800;
+}
+.contact_location {
+  width: 400px;
+}
+.contact_email ,.contact_call {
+  width: 300px;
+}
+.contact_card_block:hover {
+  transform: translate3d(0, -10px, 0);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: #e7f9f9;
+  font-weight: 900;
+  color: rgb(65, 65, 65);
+}
+.contact_icon_img {
+   transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+}
+.contact_card_block:hover .contact_icon_img {
+  transform: scale(1.5);
+}
+.contact_icon_name {
+  padding: 15px 0 10px;
+  font-size: 23px;
+  transition: padding 0.3s ease-out, transform 0.3s ease-out;
+}
+.contact_card_block:hover .contact_icon_name {
+  transform: scale(1.2);
+  padding: 20px 10px 10px; 
+}
+
+
+/* forms css */
+
+.contact_form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: blue;
+  background-color: #7941c312;
+  padding:  20px 20px;
+}
+.map_block {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.submit_form_block {
+  width: 50%;
+}
+.map_block iframe {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border-top-left-radius: 0;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.form-container {
+      /* background: white; */
+      padding: 30px;
+      border-radius: 10px;
+      /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+      width: 100%;
+      /* max-width: 500px; */
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 95%;
+    }
+
+    .form-container textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .form-container button {
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #0056b3;
+    }
+
+
+ @media (max-width: 1199px) {
+      .map_block {
+        width: 60%;
+      }
+      .submit_form_block {
+        width: 40%;
+      }
+}
+ @media (max-width: 991px) {
+      .map_block {
+        width: 55%;
+      }
+      .submit_form_block {
+        width: 45%;
+      }
+      .map_block iframe {
+        width: 400px;
+        height: 380px;
+      }
+}
+
+ @media (max-width: 750px) {
+      .map_block {
+        width: 55%;
+      }
+      .submit_form_block {
+        width: 45%;
+      }
+      .map_block iframe {
+        width: 400px;
+        height: 340px;
+      }
+}
+
+    @media (max-width: 768px) {
+      .contact_form {
+        flex-direction: column-reverse;
+      }
+      .map_block ,.submit_form_block {
+        width: 100%;
+      }
+      .map_block iframe {
+        width: 100%;
+        height: 250px;
+        border-radius: 20px;
+      }
+    }
+   </style>
+  <link rel="stylesheet" href="./header_footer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- google font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="page_bg_img">
+    <nav class="navbar_block">
+      <div class="logo_side" style="width: 150px;">
+        <!-- <span class="logo_word">codex</span>
+        <i class="fa-solid fa-earth-americas earth_icon"></i> -->
+        <img src="./images/logo_word1-removebg-preview.png" alt="" width="100%">
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="input-box" />
+      <label class="icon_menu" for="menu-toggle"><i class="fa-solid fa-bars"></i></label>
+
+      <div class="menu_side">
+        <span><a href="./index.html">Home</a></span>
+        <span><a href="./index.html#Category_id">Category</a></span>
+        <span><a href="./index.html#brand_id">Brand</a></span>
+        <span><a href="./index.html#benefits_id">Benefits</a></span>
+        <span><a href="./blog.html">Contact</a></span>
+      </div>
+    </nav>
+  </header>
+
+  <div class="" id="Category_id"></div>
+  <section class="food_category_sec" style="width: 85%;margin: 75px auto 0;">
+    <!-- <div class="food_category_headline">
+      <h2 style="font-size: 40px;color: rgb(65, 65, 65);">Category</h2>
+    </div> -->
+    <div class="category_cards_blk">
+      <div class="contact_card_block contact_location">
+        <div class="contact_icon_img">
+          <i style="font-size: 35px;" class="fa-solid fa-location-dot"></i>
+          <!-- <img src="./images/icon-vegetables-broccoli.png" alt=""> -->
+        </div>
+        <p class="contact_icon_name">Address</p>
+        <p>A108 Adam Street, New York, NY 535022</p>
+      </div>
+      <div class="contact_card_block contact_call">
+        <div class="contact_icon_img">
+          <i style="font-size: 35px;" class="fa-solid fa-phone"></i>
+          <!-- <img src="./images/icon-soft-drinks-bottle.png" alt=""> -->
+        </div>
+        <p class="contact_icon_name">Call Us</p>
+        <p>+1 5589 55488 55</p>
+      </div>
+      <div class="contact_card_block contact_email">
+        <div class="contact_icon_img">
+          <!-- <img src="./images/icon-wine-glass-bottle.png" alt=""> -->
+           <i style="font-size: 35px;" class="fa-solid fa-envelope"></i>
+        </div>
+        <p class="contact_icon_name">Email Us</p>
+        <p>info@example.com</p>
+      </div>
+    </div>
+  </section>
+ 
+
+ <section class="new_brand_sec" style="width: 85%; margin: 75px auto 0;">
+  <div class="">
+    <div class="contact_form">
+      <div class="map_block">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62751.67823909415!2d77.256223!3d10.580745!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9cc53593a4a43%3A0x2a25be82b1f743e9!2sUdumalaipettai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1750398950694!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="submit_form_block">
+        <form class="form-container">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+ </section>
+
+<section class="video_sec">
+  <div class="video_blk_img">
+    <!-- <img src="./images/logo_wrd_design_copy.png" alt="" class="image_overlay" width="100%"> -->
+    <img src="./Gif/Lemonade1-ezgif.com-crop.gif" alt="" class="image_overlay" width="100%">
+      <div class="video_no_one">
+        <video src="./videos/3209013-uhd_3840_2160_25fps.mp4" autoplay muted loop playsinline class="video_overlay" width="100%"></video>
+      </div>
+  </div>
+</section>
+
+
+
+  <footer class="footer_section">
+    <div class="footer_block">
+      <div class="scroll_icon">
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+      <div class="footer_container">
+        <div class="footer_logo_media">
+          <div class="" style="width: 200px">
+            <img src="./images/logo_wrd_design_copy-removebg-preview.png" alt="" width="100%">
+          </div>
+          <p style="margin-bottom: 5px;">Fuel your body the natural way.Fresh, clean, and full of life.</p>
+          <p style="margin-bottom: 5px;"><strong>Phone:</strong> +1 5589 55488 55</p>
+          <p style="margin-bottom: 5px;"><strong>Email:</strong> info@example.com</p>
+        </div>
+        <div class="footer_links">
+          <div style="display: grid;gap: 5px;">
+            <h2 style="margin: 10px 0;">Ultras</h2>
+            <a style="text-decoration: none;text-transform: capitalize;" href="#"><i class="fa-regular fa-circle-dot link_gap"></i>Home</a>
+            <a style="text-decoration: none;text-transform: capitalize;" href="#"><i class="fa-regular fa-circle-dot link_gap"></i>About</a>
+            <a style="text-decoration: none;text-transform: capitalize;" href="#"><i class="fa-regular fa-circle-dot link_gap"></i>Service</a>
+            <a style="text-decoration: none;text-transform: capitalize;" href="#"><i class="fa-regular fa-circle-dot link_gap"></i>Design</a>
+            <a style="text-decoration: none;text-transform: capitalize;" href="#"><i class="fa-regular fa-circle-dot link_gap"></i>Contact</a>
+          </div>
+        </div>
+        <div class="footer_links">
+          <div style="display: grid;gap: 5px;">
+            <h2 style="margin: 10px 0;">Customer Service</h2>
+            <a style="text-decoration: none;text-transform: capitalize;" href="#"><i class="fa-regular fa-circle-dot link_gap"></i>FAQ</a>
+            <a style="text-decoration: none;text-transform: capitalize;" href="#"><i class="fa-regular fa-circle-dot link_gap"></i>Contact</a>
+            <a style="text-decoration: none;text-transform: capitalize;" href="#"><i class="fa-regular fa-circle-dot link_gap"></i>Privacy Policy</a>
+            <a style="text-decoration: none;text-transform: capitalize;" href="#"><i class="fa-regular fa-circle-dot link_gap"></i>Returns & Refunds</a>
+            <a style="text-decoration: none;text-transform: capitalize;" href="#"><i class="fa-regular fa-circle-dot link_gap"></i>Delivery Information</a>
+          </div>
+        </div>
+        <div class="footer_subscribe">
+          <p>Get fresh fruits, veggies, and health tips every week.Straight from local farms to your inbox.Subscribe now and eat clean, live green.</p>
+          <div class="Subscribe_input_block">
+            <form action="">
+             <div class="email_block">
+               <input class="email_input" type="email" name="" id="" placeholder="abc@gmail.com" required><input class="submit_input" type="submit" value="Subscribe">
+             </div>
+            </form> 
+          </div>
+          <div class="social_media_icon">
+            <div class="icon_wrapper">
+              <i class="fa-brands fa-facebook-f Facebook"></i>
+              <span class="tooltip">Facebook</span>
+            </div>
+            <div class="icon_wrapper">
+              <i class="fa-brands fa-twitter Twitter"></i>
+              <span class="tooltip">Twitter</span>
+            </div>
+            <div class="icon_wrapper">
+              <i class="fa-brands fa-youtube Youtube"></i>
+              <span class="tooltip">YouTube</span>
+            </div>
+            <div class="icon_wrapper">
+              <i class="fa-brands fa-instagram Instagram"></i>
+              <span class="tooltip">Instagram</span>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </footer>
+
+  
+</body>
+</html>
